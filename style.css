@@ -1,6 +1,9 @@
 * {
     overflow-x: hidden;
 }
+ul {
+    padding:0px;
+}
 
 .logo {
     max-width: 300px;
