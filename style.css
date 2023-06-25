@@ -2,7 +2,14 @@
     overflow-x: hidden;
 }
 
+.logo {
+    max-width: 300px;
+}
+.footer-logo {
+    max-width: 200px;
+}
+
 img {
-    max-width: 80%;
+    max-width: 500px;
     height: auto;
 }
