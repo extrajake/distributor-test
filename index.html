@@ -22,22 +22,20 @@
   <body class="text-center">
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <img class="logo my-0 mr-md-auto" src="assets/images/teluslogo@x2.png" alt="" height="50">
+      <div class="contain px-5 py-2">
+        <img class="logo my-0 mr-md-auto" src="/assets/images/teluslogo@x2.png" alt="" height="50">
       </div>
+      <nav class="my-2 my-md-0 mr-md-3">
 
-    <div class="container">
-
-    <div class="explainer">
-        <div class="row my-5 justify-content-center">
-            <div class="col-8">
-                <p>Below is a list of Distributor codes that will be controlled, changed and updated by an operator at TELUS. In the production version, these codes will be hidden from public view. Pick one and enter it in the field. You will be directed to the promo page that pertains to the corresponding code.</p>
-            </div>
-        </div>
+      </nav>
+      
     </div>
 
-    <div class="promo-codes">
-        <div class="row">
-            <div class="col-sm col-md">
+    <div class="container">
+      <div class="promo-codes">
+        <div class="row grey my-5">
+          <p class="col-12 mb-5">*Only visable in pre-production site</p>
+            <div class="col-sm-12 col-md-3 col-lg-2 col-2">
                 <h3>Promo 1</h3>
                 <div id="item-list">
                     <ul style="list-style: none; align-items: center;">
@@ -45,21 +43,21 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm col-md"><h3>Promo 2</h3>
+            <div class="col-sm-12 col-md-3 col-lg-2 col-2"><h3>Promo 2</h3>
                 <div id="item-list2">
                 <ul style="list-style: none; align-items: center;">
                     <li>DCC2000</li>
                 </ul>
             </div>
         </div>
-            <div class="col-sm col-md"><h3>Promo 3</h3>
+            <div class="col-sm-12 col-md-3 col-lg-2 col-2"><h3>Promo 3</h3>
                 <div id="item-list3">
                 <ul style="list-style: none; align-items: center;">
                     <li>DCC3000</li>
                 </ul>
             </div>
                 </div>
-            <div class="col-sm col-md"><h3>Promo 4</h3>
+            <div class="col-sm-12 col-md-3 col-lg-2 col-2"><h3>Promo 4</h3>
                 <div id="item-list4">
                 <ul style="list-style: none; align-items: center;">
                     <li>DCC4000</li>
@@ -67,7 +65,7 @@
                 </ul>
             </div>
                 </div>
-            <div class="col-sm col-md"><h3>Promo 5</h3>
+            <div class="col-sm-12 col-md-3 col-lg-2 col-2"><h3>Promo 5</h3>
                 <div id="item-list5">
                     <ul style="list-style: none; align-items: center;">
                         <li>DCC5000</li>
@@ -77,20 +75,37 @@
         </div>
     </div>
 
-        <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-    <form id ="codeForm" action="/" method="POST" class="form-signin mt-5">
-      <h1 class="mb-3 font-weight-normal">Enter your Promo Code</h1>
-      <label for="inputEmail" class="sr-only">Code</label>
-      <input id="inputField" type="text" id="inputEmail" name="inputField" class="form-control" placeholder="Code">
-      <div class="checkbox mb-3">
+      <div class="container smargin bmargin">
+        <div class="row mb-5">
+          <div class="col-md-12 col-lg-7 col-12">
+            <img class="col-md-3 col-lg-3 col-12" src="/assets/images/Telus-Logo.png"/>
+            
+            <h1 class="display-4">A special offer is waiting for you.</h1>
+            <br>
+            
+            <div class="row justify-content-center">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                 <form id ="codeForm" action="/" method="POST" class="form-signin">
+                   <h4 class="mb-4 font-weight-normal purple">Enter your Promo Code</h4>
+                    <label for="inputEmail" class="sr-only">Code</label>
+                    <input id="inputField" type="text" id="inputEmail" name="inputField" class="form-control" placeholder="Code">
+                  <div class="checkbox mb-4">
+               </div>
+                  <button class="btn btn-primary btn-lg btn-block col-xl-7 col-lg-7 col-md-7 mx-auto" style="background-color: #2B8000;" type="submit">Enter</button>
+                  </form>
+            </div>
+            
+         </div>
       </div>
-     <button class="btn btn-primary btn-lg btn-block" style="background-color: #2B8000;" type="submit">Enter</button>
-   
-    </form>
+      <div class="col-md-12 col-lg-5 col-xl-5 col-12">
+        <img class="lemur" src="assets/images/Lemur-looking-up-2x.webp" alt="">
+      </div>
+        </div>
+      </div>
 
-</div>
-</div>
+    
+
+        
 </div>
 
 <footer class="pt-4 my-md-2 border-top">

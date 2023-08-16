@@ -11,6 +11,7 @@ document.getElementById('codeForm').addEventListener('submit', function(event) {
   const codes4 = ["DCC4000"];
   const codes5 = ["DCC5000"];
 
+
   if (codes.includes(url)) {
     window.location.href = '/promo1.html'
   } else if (codes2.includes(url)) {
