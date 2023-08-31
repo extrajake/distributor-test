@@ -146,8 +146,8 @@ input:focus, input:active {
 
 .flip {
     transform: scaleX(-1);
-    margin-left: -10%;
-    width: 118%;
+    margin-left: -13%;
+    width: 121%;
 }
 
 .hideView {
@@ -263,6 +263,7 @@ input:focus, input:active {
     font-weight: 300;
     color: #4C286D;
     overflow: visible;
+    letter-spacing: -0.1rem;
 }
 
 .terms li {
@@ -273,7 +274,11 @@ input:focus, input:active {
     line-height: 1.42857;
     margin-bottom: 16px;
     margin-left: 32px;
-    word-break: break-word;
+    word-break: break-word;   
+}
+
+.terms {
+    padding: 0px 20px;
 }
 
 @media only screen and (max-width: 1200px) {
