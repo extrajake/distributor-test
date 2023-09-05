@@ -1,7 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 
 * {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .logo {
@@ -11,8 +12,12 @@
 }
 
 ul {
-    list-style: none;
+    /* list-style: none; */
     align-items: start;
+}
+li {
+    display: list-item;
+    list-style-position: inside !important;
 }
 
 .icon {
@@ -113,6 +118,7 @@ input:focus, input:active {
     padding: 4px 6px;
     border-radius: 10px;
     cursor: pointer;
+    list-style: decimal;
 }
 .terms-icon.active {
     rotate: 90deg;
@@ -142,6 +148,13 @@ input:focus, input:active {
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+    background-color: #ccc;
+}
+
+.full-width {
+    /* position:absolute; */
+    width:100%;
+    background-color: #F4F4F7;
 }
 
 .flip {
@@ -259,27 +272,40 @@ input:focus, input:active {
 
 .display-4 {
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 50px;
+    font-size: 46px;
     font-weight: 300;
     color: #4C286D;
     overflow: visible;
-    letter-spacing: -0.1rem;
 }
 
 .terms li {
-    /* display: list-item; */
+    display: list-item;
     color: rgb(65, 69, 71);
     /* font-family: HelveticaNow400normal; */
     font-size: 14px;
     line-height: 1.42857;
-    margin-bottom: 16px;
-    margin-left: 32px;
-    word-break: break-word;   
+    margin-bottom: 16px;  
+    /* display: list-item !important; */
+    list-style-position: outside !important;
+    
+    /* word-break: break-word;    */
 }
 
 .terms {
-    padding: 0px 20px;
+    padding: 20px 0px;
+    text-align: justify;
+    list-style:decimal;
 }
+
+ol {
+    list-style: decimal;
+}
+
+li::marker {
+    position: absolute;
+    margin-left:-10px;
+}
+
 
 @media only screen and (max-width: 1200px) {
     .lemur {
