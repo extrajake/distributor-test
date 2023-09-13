@@ -13,11 +13,11 @@ document.getElementById('codeForm').addEventListener('submit', function(event) {
 
 
   if (codes.includes(url)) {
-    window.location.href = '/promo1.html'
+    window.location.href = '/promo-redirect-1.html'
   } else if (codes2.includes(url)) {
-    window.location.href = '/promo2.html'
+    window.location.href = '/promo-redirect-2.html'
   } else if (codes3.includes(url)) {
-    window.location.href = '/promo3.html'
+    window.location.href = '/promo-redirect-3.html'
   } else if (codes4.includes(url)) {
     window.location.href = '/promo4.html'
   } else if (codes5.includes(url)) {
