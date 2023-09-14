@@ -2,7 +2,7 @@
 
 * {
     /* overflow-x: hidden; */
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica', Arial, Roboto, sans-serif;
 }
 
 .logo {
@@ -20,6 +20,10 @@ li {
     list-style-position: inside !important;
 }
 
+a {
+    color: #2A8000 !important;
+}
+
 .icon {
     height: 36px;
     width: 36px;
@@ -33,7 +37,7 @@ li {
 }
 
 .helvetica {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .lheight {
@@ -148,7 +152,7 @@ input:focus, input:active {
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    background-color: #ccc;
+    background-color: #f4f4f7;
 }
 
 .full-width {
@@ -282,6 +286,7 @@ input:focus, input:active {
     display: list-item;
     color: rgb(65, 69, 71);
     /* font-family: HelveticaNow400normal; */
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857;
     margin-bottom: 16px;  
