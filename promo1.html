@@ -79,42 +79,6 @@
       </div>
     </div>
 
-    <h1>List of Companies</h1>
-    <ul id="companyList"></ul>
-
-    <script>
-        // Replace 'YOUR_API_KEY' with your actual HubSpot API key
-        const apiKey = 'pat-na1-70302af9-f0f7-4814-96cd-f3648b8f4eca';
-        
-        // Define the HubSpot API endpoint for companies
-        const endpoint = 'https://api.hubapi.com/companies/v2/companies/paged';
-        
-        // Function to fetch and display companies in the DOM
-        async function fetchAndDisplayCompanies() {
-            try {
-                const response = await fetch(`${endpoint}?hapikey=${apiKey}`);
-                const data = await response.json();
-                
-                // Get the list of companies
-                const companies = data.companies;
-
-                // Get a reference to the <ul> element in the DOM
-                const companyList = document.getElementById('companyList');
-
-                // Loop through the companies and add them to the <ul> element
-                companies.forEach(company => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = company.name;
-                    companyList.appendChild(listItem);
-                });
-            } catch (error) {
-                console.error('Error fetching companies:', error);
-            }
-        }
-
-        // Call the fetchAndDisplayCompanies function to retrieve and display companies
-        fetchAndDisplayCompanies();
-    </script>
 
       <div class="pt-2 pb-2 my-md-5 border-top">
         <div class="container">
