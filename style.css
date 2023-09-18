@@ -198,7 +198,7 @@ input:focus, input:active {
 .bBorder p {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    color:#878383;
+    color:#2c2e30;
 }
 
 .pBanner {
@@ -280,6 +280,10 @@ input:focus, input:active {
     font-weight: 300;
     color: #4C286D;
     overflow: visible;
+}
+
+.grey-text {
+    color:#2c2e30;
 }
 
 .terms li {
