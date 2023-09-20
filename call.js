@@ -1,48 +1,3 @@
-// // Make the API call
-// const queryString = window.location.search;
-// const urlParams = new URLSearchParams(queryString);
-
-// const id = urlParams.get("id");
-// var data = localStorage.getItem("data");
-// var headers = {
-//   "QB-Realm-Hostname": "jakelacouvee.quickbase.com",
-//   Authorization: "QB-USER-TOKEN b7kbbw_qsqq_0_b9ykyiacmnx3bbj6z9gjqmupkr",
-//   "Content-Type": "application/json"
-// };
-// var body = {
-//   from: "btkjt6r8g",
-//   select: [ 1, 2, 3, 4, 5, 9, 10],
-//   where: "{42.EX.'" + id + "'}"
-// };
-
-// const xmlHttp = new XMLHttpRequest();
-
-// xmlHttp.open('GET', 'https://api.quickbase.com/v1/fields/10?tableId=btkjt6r8g', true);
-
-// for (const key in headers) {
-//     xmlHttp.setRequestHeader(key, headers[key]);
-// }
-
-// xmlHttp.onreadystatechange = function() {
-//     if (xmlHttp.readyState === XMLHttpRequest.DONE) {
-//         const response = JSON.parse(xmlHttp.response);
-//         if (response.data) {
-//             var item = response.data[0];
-//             console.log(item);
-
-//             var phoneNumber = (item[9].value) ? item[9].value : "";
-//             var dccCode = (item[10].value) ? item[10].value : "";
-//             document.getElementById("phoneNumber").innerHTML = phoneNumber;
-//             document.getElementById("dccCode").innerHTML = dccCode;
-//         }
-//     }
-
-
-// }
-// xmlHttp.send(JSON.stringify(body));
-
-// Make the API call
-
 
 var headers = {
   'QB-Realm-Hostname': 'jakelacouvee.quickbase.com',
@@ -51,38 +6,53 @@ var headers = {
   'Content-Type': 'application/json'
 }
 
-// var body = {
-//   from: "btkjt6r8g",
-//   select: [9, 10],
-//   where: "{42.EX.'" + id + "'}"
-// };
-
-
-const xmlHttp = new XMLHttpRequest();
-xmlHttp.open('GET', 'https://api.quickbase.com/v1/fields/10?tableId=btkjt6r8g', true);
-for (const key in headers) {
-xmlHttp.setRequestHeader(key, headers[key]);
+var headers = {
+  'QB-Realm-Hostname': 'jakelacouvee.quickbase.com',
+'User-Agent': '{User-Agent}',
+'Authorization': 'QB-USER-TOKEN b7kbbw_qsqq_0_b9ykyiacmnx3bbj6z9gjqmupkr',
+  'Content-Type': 'application/json'
 }
-xmlHttp.onreadystatechange = function() {
-if (xmlHttp.readyState === XMLHttpRequest.DONE) {
-  const responseObj = JSON.parse(xmlHttp.response);
+var body = {
+  from: "btkjt6r2v",
+  select: [1, 2, 3, 4, 5, 6, 9, 10, 13],
+  sortBy: [{ order: "ASC" }],
+  options: { skip: 0, top: 0, compareWithAppLocalTime: false }
+}
 
-  if (responseObj.data) {
-                var item = response.data[0];
-                console.log(item);
-    
-                var phoneNumber = (item[9].value) ? item[9].value : "";
-                var dccCode = (item[10].value) ? item[10].value : "";
-                document.getElementById("phoneNumber").innerHTML = phoneNumber;
-                document.getElementById("dccCode").innerHTML = dccCode;
-            }
+fetch('https://api.quickbase.com/v1/records/query',
+{
+  method: 'POST',
+  headers: headers,
+  body: JSON.stringify(body)
+})
+.then(res => {
+if (res.ok) {
+  return res.json().then(res => {
+    // Access the data array from the response
+    const data = res.data;
+    console.log(data[0]);
 
-  console.log(responseObj);
-      
-      // Now you can work with the responseObj as a JavaScript object
-  
-  }
-};
+    document.getElementById("phoneNumber").innerHTML = data[0][13].value;
+    document.getElementById("dccCode").innerHTML = data[0][6].value;
 
-xmlHttp.send();
+    // Create an unordered list (UL)
+    // const ul = document.createElement("ul");
+
+    // // Loop through the data array and create list items (LI)
+    // data.forEach(item => {
+    //   const li = document.createElement("li");
+    //   li.textContent = JSON.stringify(item); // Display the item as JSON string, you can format it as needed
+    //   ul.appendChild(li);
+    // });
+
+    // // Append the unordered list to the "data-list" element
+    // dataList.appendChild(ul);
+  });
+} else {
+  return res.json().then(resBody => Promise.reject({ status: res.status, ...resBody }));
+}
+})
+.catch(err => console.log(err));
+
+
 
