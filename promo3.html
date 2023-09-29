@@ -49,7 +49,7 @@
           <br>
           <h6>You deserve better internet. And you can get it with PureFibre® Gigabit – only TELUS offers 100% fibre direct to your home.</h6>
           <br>
-          <h6 class="promo-banner">To learn more, call (888) 888 8888 <br> and use offer code: DCC3000</h6>
+          <h6 class="promo-banner helvetica">To learn more, call <span id="phoneNumber">Phone Number</span> <br> and use offer code: DCC<span id="dccCode"></span></h6>
         </div>
         <div class="col-md-5 col-lg-5 col-12">
           <img class="mheight" src="/assets/images/internet-hub-roundel-hummingbird-95.webp" alt="https://images.ctfassets.net/fltupc9ltp8m/4tIiHyqYak9D3DJnAcHSps/533f7e0c5c6e7252c09e92fc0d4685d7/chameleon_preowned__EN_.png?fm=webp&w=1900&q=80" alt="" height="400">
@@ -94,7 +94,7 @@
           <div class="content">
             <br>
             <div class="container">
-            <ol class="col-sm-12 terms helvetica">
+            <ol id="termsAndConditons" class="col-sm-12 terms helvetica">
               <li>Current as of May 3, 2023. Credit only available for new activations with Bring Your Own Phone, when paired with an in-market 5G+ plan. Savings applied as a $10 monthly bill credit over the next 24 months. Available online only. Offer cannot be combined with other code-based offers. Offer is available for a limited time and subject to change without notice. Consumer accounts only.</li>
               <li>5G access requires a compatible device and connection to TELUS' 5G network where available. Speed and signal strength may vary with your device, configuration, Internet traffic, environmental conditions, applicable network management and other factors. For more information, visit <a href="https://www.telus.com/en/mobility/network/coverage-map">telus.com/coverage</a>. Data speeds reduced to a maximum of 512Kbps after your included high-speed data bucket is exhausted. Speed may vary with your device, internet traffic, environmental conditions, and other factors. Please refer to TELUS’ Fair Use Policy at <a href="https://www.telus.com/en/support/article/fair-use-policy">telus.com/fairusepolicy</a> for further information.</li>
               <li>The $60 savings is a waiving of our $60 connection fee. Offer applicable online only on Mobility orders for smartphones, connected devices (ie. tablets, smartwatches) and Bring Your Own Device plans. Offer applicable to Mobility consumer accounts only. Offer not applicable to Business, Corporate or EPP account types.</li>
@@ -166,6 +166,7 @@
   </div>
 
 
+  <script src="call-internet.js" type="module"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

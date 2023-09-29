@@ -14,7 +14,7 @@ var headers = {
 }
 var body = {
   from: "btkjt6r2v",
-  select: [1, 2, 3, 4, 5, 6, 9, 10, 13],
+  select: [1, 2, 3, 4, 5, 6, 9, 10, 13, 20],
   sortBy: [{ order: "ASC" }],
   options: { skip: 0, top: 0, compareWithAppLocalTime: false }
 }

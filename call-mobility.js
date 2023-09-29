@@ -13,8 +13,8 @@ var headers = {
     'Content-Type': 'application/json'
   }
   var body = {
-    from: "btkjt6sag",
-    select: [ 9, 10, 11],
+    from: "btkjt6r58",
+    select: [12, 13, 14],
     sortBy: [{ order: "ASC" }],
     options: { skip: 0, top: 0, compareWithAppLocalTime: false }
   }
@@ -32,9 +32,9 @@ var headers = {
       const data = res.data;
       console.log(data[0]);
   
-      document.getElementById("phoneNumber").innerHTML = data[0][9].value;
-      document.getElementById("dccCode").innerHTML = data[0][10].value;
-      document.getElementById("termsAndConditons").innerHTML = data[0][11].value;
+      document.getElementById("phoneNumber").innerHTML = data[0][12].value;
+      document.getElementById("dccCode").innerHTML = data[0][13].value;
+      document.getElementById("termsAndConditions").innerHTML = data[0][14].value;
 
   
       // Create an unordered list (UL)

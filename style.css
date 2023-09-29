@@ -300,6 +300,20 @@ input:focus, input:active {
     /* word-break: break-word;    */
 }
 
+.offerbutton {
+    margin:auto;
+    padding: 11px 31px;
+    background-color: rgb(43, 128, 0);
+    min-width: 144px;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 32px;
+    border-width: 1px;
+    max-width: 100%;
+    transition: background-color 200ms ease 0s, border-color 200ms ease 0s;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .terms {
     padding: 20px 0px;
     text-align: justify;

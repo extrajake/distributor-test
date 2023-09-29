@@ -14,7 +14,7 @@ var headers = {
   }
   var body = {
     from: "btkjt6r8g",
-    select: [1, 2, 3, 4, 5, 6, 9, 10, 13],
+    select: [9, 10, 12, 14],
     sortBy: [{ order: "ASC" }],
     options: { skip: 0, top: 0, compareWithAppLocalTime: false }
   }
@@ -33,7 +33,9 @@ var headers = {
       console.log(data[0]);
   
       document.getElementById("phoneNumber").innerHTML = data[0][9].value;
-      document.getElementById("dccCode").innerHTML = data[0][6].value;
+      document.getElementById("dccCode").innerHTML = data[0][10].value;
+      document.getElementById("offerBubble").innerHTML = data[0][12].value;
+      document.getElementById("termsAndConditions").innerHTML = data[0][14].value;
   
       // Create an unordered list (UL)
       // const ul = document.createElement("ul");
