@@ -30,10 +30,17 @@ if (res.ok) {
   return res.json().then(res => {
     // Access the data array from the response
     const data = res.data;
-    console.log(data[0]);
+    data.forEach(item => {
+      const fieldValue = item[6].value;
+      if (fieldValue) {
+        console.log(fieldValue);
+      }
+    })
+    // console.log(data);
 
     document.getElementById("phoneNumber").innerHTML = data[0][13].value;
     document.getElementById("dccCode").innerHTML = data[0][6].value;
+    document.getElementById("codes").innerHTML = fieldValue;
 
     // Create an unordered list (UL)
     // const ul = document.createElement("ul");
