@@ -31,11 +31,29 @@ var headers = {
       // Access the data array from the response
       const data = res.data;
       console.log(data[0]);
-  
-      document.getElementById("phoneNumber").innerHTML = data[0][9].value;
-      document.getElementById("dccCode").innerHTML = data[0][10].value;
-      document.getElementById("offerBubble").innerHTML = data[0][12].value;
-      document.getElementById("termsAndConditions").innerHTML = data[0][14].value;
+
+      
+      const phoneValues = data.map(item => item[9].value).filter(value => value);
+      document.getElementById("phoneNumber").innerHTML = phoneValues;
+
+      const dccCodeValues = data.map(item => item[10].value).filter(value => value);
+      document.getElementById("dccCode").innerHTML = dccCodeValues;
+      
+      const offerValues = data.map(item => item[12].value).filter(value => value);
+      document.getElementById("offerBubble").innerHTML = offerValues;
+
+      const termsValues = data.map(item => item[14].value).filter(value => value);
+    
+      const ol = document.getElementById("termsAndConditions");
+
+      // Loop through the termsValues array and create a new list item for each item
+      termsValues.forEach(value => {
+        const li = document.createElement("li"); // Create a new list item element
+        li.textContent = value; // Set the text content of the list item to the array item
+        ol.appendChild(li); // Append the list item to the UL
+      });
+
+      console.log(termsValues);
   
       // Create an unordered list (UL)
       // const ul = document.createElement("ul");
